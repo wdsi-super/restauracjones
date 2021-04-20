@@ -13,7 +13,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-        <Button Click="Button_Click">przycisk</Button>
+            <Button Content="{Binding Path=Tescik}"></Button>
         </Grid>
         <Grid Grid.Row="1">
             <ListView>

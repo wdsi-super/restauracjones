@@ -10,6 +10,8 @@ namespace ai_restauracje
 	{
 		public List<string> AttributesList;
 		public List<Restaurant> Restaurants;
+		public string Test { get => "Dziaa"; }
+
 
 		public Model(string filepath = "")
         {

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace ai_restauracje
 {
-	class MainViewModel : ViewModelBase
+	public class MainViewModel : ViewModelBase
 	{
+		Model _model;
+
 		private string _openFileName;
 		public string OpenFileName
 		{
@@ -15,5 +17,14 @@ namespace ai_restauracje
 			set => SetProperty(ref _openFileName, value);
 		}
 
+		public string Tescik
+        {
+			get => _model.Test;
+        }
+
+		public MainViewModel(Model model)
+        {
+			_model = model;
+        }
 	}
 }

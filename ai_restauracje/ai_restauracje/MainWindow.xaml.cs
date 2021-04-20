@@ -20,14 +20,17 @@ namespace ai_restauracje
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		Model model;
+		MainViewModel mainViewModel;
+
+
 		public MainWindow()
 		{
 			InitializeComponent();
-		}
 
-		private void Button_Click(object sender, RoutedEventArgs e)
-		{
-			((Button)sender).Content = "siema";
+			model = new Model();
+			mainViewModel = new MainViewModel(model);
+			DataContext = mainViewModel;
 		}
 	}
 }
