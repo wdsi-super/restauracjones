@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+        <Button Click="Button_Click">przycisk</Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <ListView>
+            </ListView>
+        </Grid>
     </Grid>
 </Window>

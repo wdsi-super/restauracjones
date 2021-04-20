@@ -24,5 +24,10 @@ namespace ai_restauracje
 		{
 			InitializeComponent();
 		}
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			((Button)sender).Content = "siema";
+		}
 	}
 }
