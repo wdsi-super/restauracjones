@@ -1,0 +1,1043 @@
+﻿//pub,pizzeria, cafe,bar, italian restaurant, polish restaurant, kebab, oriental restaurant, vegan restaurant, indian restaurant, burger&steak restaurant, fusion restaurant,children friendly, animals friendly
+[
+  {
+    "name": "Nonna Pizza",
+    "location": "Warszawa",
+    "attributes": [
+      "0",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1"
+    ]
+  },
+  {
+    "name": "Welcome India",
+    "location": "Warszawa",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "Vegan Ramen Shop",
+    "location": "Warszawa",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1"
+    ]
+  },
+  {
+    "name": "Leonardo Verde",
+    "location": "Warszawa",
+    "attributes": [
+      "0",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "Barn Burger",
+    "location": "Warszawa",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "Amrit Kebab",
+    "location": "Warszawa",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "Pif Paf",
+    "location": "Warszawa",
+    "attributes": [
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1"
+    ]
+  },
+  {
+    "name": "Binh Bong",
+    "location": "Warszawa",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "U Szwejka",
+    "location": "Warszawa",
+    "attributes": [
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "The Cool Cat",
+    "location": "Warszawa",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "The Alchemist Grill & Cocktail",
+    "location": "Warszawa",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "1",
+      "1",
+      "0",
+      "1"
+    ]
+  },
+  {
+    "name": "Piwnica Rajców",
+    "location": "Gdańsk",
+    "attributes": [
+      "1",
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "Tutam",
+    "location": "Gdańsk",
+    "attributes": [
+      "0",
+      "1",
+      "1",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "Whiskey in the Jar",
+    "location": "Gdańsk",
+    "attributes": [
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "1"
+    ]
+  },
+  {
+    "name": "Restauracja Ritz",
+    "location": "Gdańsk",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "OSTRO.",
+    "location": "Gdańsk",
+    "attributes": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "Ryż",
+    "location": "Gdańsk",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "1"
+    ]
+  },
+  {
+    "name": "Zakorkowani Wine Bistro",
+    "location": "Gdańsk",
+    "attributes": [
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "CHEF Food&Friends",
+    "location": "Gdańsk",
+    "attributes": [
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "1",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "Balsam Cafe and Restaurant",
+    "location": "Gdańsk",
+    "attributes": [
+      "1",
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "Restauracja TRUE",
+    "location": "Gdańsk",
+    "attributes": [
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "0",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "Bistro Bene by Tomasz Leśniak",
+    "location": "Kraków",
+    "attributes": [
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "The Himalayan Treasure, Flavor of Asia",
+    "location": "Kraków",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1"
+    ]
+  },
+  {
+    "name": "Taste of India",
+    "location": "Kraków",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "Sioux",
+    "location": "Kraków",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "Boccanera",
+    "location": "Kraków",
+    "attributes": [
+      "0",
+      "1",
+      "1",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0"
+    ]
+  },
+  {
+    "name": "Boccanera",
+    "location": "Kraków",
+    "attributes": [
+      "0",
+      "1",
+      "1",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0"
+    ]
+  },
+  {
+    "name": "Moo Moo Steak & Burger Club",
+    "location": "Kraków",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "Restauracja Polska",
+    "location": "Kraków",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "Frania Cafe",
+    "location": "Kraków",
+    "attributes": [
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "Multi Qlti",
+    "location": "Kraków",
+    "attributes": [
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1"
+    ]
+  },
+  {
+    "name": "Golonkarnia Bar & Restauracja",
+    "location": "Kraków",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "Iggy Pizza",
+    "location": "Wrocław",
+    "attributes": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "Soczewka Kuchnia + Bar",
+    "location": "Wrocław",
+    "attributes": [
+      "1",
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "Mango Mama Rynek",
+    "location": "Wrocław",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1"
+    ]
+  },
+  {
+    "name": "Woo Thai Restaurant",
+    "location": "Wrocław",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "Tutti Santi - Wrocław",
+    "location": "Wrocław",
+    "attributes": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0"
+    ]
+  },
+  {
+    "name": "Speakeasy - księgarnio - kawiarnia kryminalna",
+    "location": "Wrocław",
+    "attributes": [
+      "0",
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "OK Wine Bar Restauracja",
+    "location": "Wrocław",
+    "attributes": [
+      "0",
+      "0",
+      "1",
+      "1",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "0",
+      "1",
+      "0"
+    ]
+  },
+  {
+    "name": "Orientuj się",
+    "location": "Wrocław",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "1",
+      "0"
+    ]
+  },
+  {
+    "name": "Niezły Dym",
+    "location": "Wrocław",
+    "attributes": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0"
+    ]
+  },
+  {
+    "name": "Nielnna Piekarnia i Wino",
+    "location": "Wrocław",
+    "attributes": [
+      "0",
+      "0",
+      "1",
+      "1",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "MO.BAR",
+    "location": "Poznań",
+    "attributes": [
+      "0",
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "1"
+    ]
+  },
+  {
+    "name": "Schaboszczak od Dziadka",
+    "location": "Poznań",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "0"
+    ]
+  },
+  {
+    "name": "ORZO People Music Nature Poznań",
+    "location": "Poznań",
+    "attributes": [
+      "0",
+      "0",
+      "1",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "1",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "Tutti Santi",
+    "location": "Poznań",
+    "attributes": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "Tutti Santi",
+    "location": "Poznań",
+    "attributes": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1"
+    ]
+  },
+  {
+    "name": "Thai Thai Poznań",
+    "location": "Poznań",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "1"
+    ]
+  },
+  {
+    "name": "Wiejskie Jadło",
+    "location": "Poznań",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "Taj india",
+    "location": "Poznań",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0"
+    ]
+  },
+  {
+    "name": "Oberża Pod Dzwonkiem",
+    "location": "Poznań",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "name": "Mc Doner Kebab",
+    "location": "Poznań",
+    "attributes": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0"
+    ]
+  }
+]
