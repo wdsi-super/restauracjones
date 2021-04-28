@@ -24,7 +24,6 @@ namespace ai_restauracje
             Model m = JsonSerializer.Deserialize<Model>(jsonString);
             AttributeNames = m.AttributeNames;
             Restaurants = m.Restaurants;
-            Restaurants[0].Sim(Restaurants[1]);
         }
     }
 
