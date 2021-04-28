@@ -1,5 +1,5 @@
 ﻿{
-  "attributeNames": [
+  "AttributeNames": [
     "pub",
     "pizzeria",
     "cafe",
@@ -15,266 +15,266 @@
     "children friendly",
     "animals friendly"
   ],
-  "restaurants": [
+  "Restaurants": [
     {
-      "name": "Nonna Pizza",
-      "location": "Warszawa",
-      "attributes": ["0","1","0","0","1","0","0","0","0","0","0","0","0","1"]
+      "Name": "Nonna Pizza",
+      "Location": "Warszawa",
+      "Attributes": [0,1,0,0,1,0,0,0,0,0,0,0,0,1]
     },
     {
-      "name": "Welcome India",
-      "location": "Warszawa",
-      "attributes": ["0","0","0","0","0","0","0","1","0","1","0","0","1","1"]
+      "Name": "Welcome India",
+      "Location": "Warszawa",
+      "Attributes": [0,0,0,0,0,0,0,1,0,1,0,0,1,1]
     },
     {
-      "name": "Vegan Ramen Shop",
-      "location": "Warszawa",
-      "attributes": ["0","0","0","1","0","0","0","1","1","0","0","0","0","1"]
+      "Name": "Vegan Ramen Shop",
+      "Location": "Warszawa",
+      "Attributes": [0,0,0,1,0,0,0,1,1,0,0,0,0,1]
     },
     {
-      "name": "Leonardo Verde",
-      "location": "Warszawa",
-      "attributes": ["0","1","0","0","1","0","0","0","1","0","0","0","1","1"]
+      "Name": "Leonardo Verde",
+      "Location": "Warszawa",
+      "Attributes": [0,1,0,0,1,0,0,0,1,0,0,0,1,1]
     },
     {
-      "name": "Barn Burger",
-      "location": "Warszawa",
-      "attributes": ["0","0","0","1","0","0","0","0","0","0","1","0","0","0"]
+      "Name": "Barn Burger",
+      "Location": "Warszawa",
+      "Attributes": [0,0,0,1,0,0,0,0,0,0,1,0,0,0]
     },
     {
-      "name": "Amrit Kebab",
-      "location": "Warszawa",
-      "attributes": ["0","0","0","1","0","0","1","1","0","0","0","0","0","0"]
+      "Name": "Amrit Kebab",
+      "Location": "Warszawa",
+      "Attributes": [0,0,0,1,0,0,1,1,0,0,0,0,0,0]
     },
     {
-      "name": "Pif Paf",
-      "location": "Warszawa",
-      "attributes": ["1","0","0","1","0","0","0","1","0","1","0","0","0","1"]
+      "Name": "Pif Paf",
+      "Location": "Warszawa",
+      "Attributes": [1,0,0,1,0,0,0,1,0,1,0,0,0,1]
     },
     {
-      "name": "Binh Bong",
-      "location": "Warszawa",
-      "attributes": ["0","0","0","1","0","0","1","1","0","0","0","0","0","0"]
+      "Name": "Binh Bong",
+      "Location": "Warszawa",
+      "Attributes": [0,0,0,1,0,0,1,1,0,0,0,0,0,0]
     },
     {
-      "name": "U Szwejka",
-      "location": "Warszawa",
-      "attributes": ["1","0","0","0","0","1","0","0","0","0","0","0","1","1"]
+      "Name": "U Szwejka",
+      "Location": "Warszawa",
+      "Attributes": [1,0,0,0,0,1,0,0,0,0,0,0,1,1]
     },
     {
-      "name": "The Cool Cat",
-      "location": "Warszawa",
-      "attributes": ["0","0","0","1","0","0","0","1","1","0","0","1","1","1"]
+      "Name": "The Cool Cat",
+      "Location": "Warszawa",
+      "Attributes": [0,0,0,1,0,0,0,1,1,0,0,1,1,1]
     },
     {
-      "name": "The Alchemist Grill & Cocktail",
-      "location": "Warszawa",
-      "attributes": ["0","0","0","1","0","0","0","1","0","0","1","1","0","1"]
+      "Name": "The Alchemist Grill & Cocktail",
+      "Location": "Warszawa",
+      "Attributes": [0,0,0,1,0,0,0,1,0,0,1,1,0,1]
     },
     {
-      "name": "Piwnica Rajców",
-      "location": "Gdańsk",
-      "attributes": ["1","0","1","1","0","1","0","0","0","0","1","0","0","0"]
+      "Name": "Piwnica Rajców",
+      "Location": "Gdańsk",
+      "Attributes": [1,0,1,1,0,1,0,0,0,0,1,0,0,0]
     },
     {
-      "name": "Tutam",
-      "location": "Gdańsk",
-      "attributes": ["0","1","1","1","1","0","0","0","0","0","0","0","1","1"]
+      "Name": "Tutam",
+      "Location": "Gdańsk",
+      "Attributes": [0,1,1,1,1,0,0,0,0,0,0,0,1,1]
     },
     {
-      "name": "Whiskey in the Jar",
-      "location": "Gdańsk",
-      "attributes": ["1","0","0","1","0","0","0","0","0","0","1","0","0","1"]
+      "Name": "Whiskey in the Jar",
+      "Location": "Gdańsk",
+      "Attributes": [1,0,0,1,0,0,0,0,0,0,1,0,0,1]
     },
     {
-      "name": "Restauracja Ritz",
-      "location": "Gdańsk",
-      "attributes": ["0","0","0","1","0","1","0","0","1","0","0","1","0","0"]
+      "Name": "Restauracja Ritz",
+      "Location": "Gdańsk",
+      "Attributes": [0,0,0,1,0,1,0,0,1,0,0,1,0,0]
     },
     {
-      "name": "OSTRO.",
-      "location": "Gdańsk",
-      "attributes": ["0","1","1","0","1","0","0","0","1","0","0","0","1","1"]
+      "Name": "OSTRO.",
+      "Location": "Gdańsk",
+      "Attributes": [0,1,1,0,1,0,0,0,1,0,0,0,1,1]
     },
     {
-      "name": "Ryż",
-      "location": "Gdańsk",
-      "attributes": ["0","0","0","1","0","0","0","1","1","0","1","0","0","1"]
+      "Name": "Ryż",
+      "Location": "Gdańsk",
+      "Attributes": [0,0,0,1,0,0,0,1,1,0,1,0,0,1]
     },
     {
-      "name": "Zakorkowani Wine Bistro",
-      "location": "Gdańsk",
-      "attributes": ["0","0","1","0","1","1","0","0","1","0","0","0","1","1"]
+      "Name": "Zakorkowani Wine Bistro",
+      "Location": "Gdańsk",
+      "Attributes": [0,0,1,0,1,1,0,0,1,0,0,0,1,1]
     },
     {
-      "name": "CHEF Food&Friends",
-      "location": "Gdańsk",
-      "attributes": ["0","0","1","0","1","1","0","0","1","0","0","1","1","1"]
+      "Name": "CHEF Food&Friends",
+      "Location": "Gdańsk",
+      "Attributes": [0,0,1,0,1,1,0,0,1,0,0,1,1,1]
     },
     {
-      "name": "Balsam Cafe and Restaurant",
-      "location": "Gdańsk",
-      "attributes": ["1","0","1","1","0","1","0","0","0","0","0","0","1","1"]
+      "Name": "Balsam Cafe and Restaurant",
+      "Location": "Gdańsk",
+      "Attributes": [1,0,1,1,0,1,0,0,0,0,0,0,1,1]
     },
     {
-      "name": "Restauracja TRUE",
-      "location": "Gdańsk",
-      "attributes": ["0","0","1","0","1","0","0","0","1","0","1","0","1","1"]
+      "Name": "Restauracja TRUE",
+      "Location": "Gdańsk",
+      "Attributes": [0,0,1,0,1,0,0,0,1,0,1,0,1,1]
     },
     {
-      "name": "Bistro Bene by Tomasz Leśniak",
-      "location": "Kraków",
-      "attributes": ["0","0","1","0","1","0","0","0","0","0","1","0","1","1"]
+      "Name": "Bistro Bene by Tomasz Leśniak",
+      "Location": "Kraków",
+      "Attributes": [0,0,1,0,1,0,0,0,0,0,1,0,1,1]
     },
     {
-      "name": "The Himalayan Treasure, Flavor of Asia",
-      "location": "Kraków",
-      "attributes": ["0","0","0","0","0","0","0","1","1","1","0","0","0","1"]
+      "Name": "The Himalayan Treasure, Flavor of Asia",
+      "Location": "Kraków",
+      "Attributes": [0,0,0,0,0,0,0,1,1,1,0,0,0,1]
     },
     {
-      "name": "Taste of India",
-      "location": "Kraków",
-      "attributes": ["0","0","0","0","0","0","0","1","1","1","0","0","1","1"]
+      "Name": "Taste of India",
+      "Location": "Kraków",
+      "Attributes": [0,0,0,0,0,0,0,1,1,1,0,0,1,1]
     },
     {
-      "name": "Sioux",
-      "location": "Kraków",
-      "attributes": ["0","0","0","1","0","1","0","0","0","0","1","0","0","0"]
+      "Name": "Sioux",
+      "Location": "Kraków",
+      "Attributes": [0,0,0,1,0,1,0,0,0,0,1,0,0,0]
     },
     {
-      "name": "Boccanera",
-      "location": "Kraków",
-      "attributes": ["0","1","1","1","1","0","0","0","1","0","0","0","1","0"]
+      "Name": "Boccanera",
+      "Location": "Kraków",
+      "Attributes": [0,1,1,1,1,0,0,0,1,0,0,0,1,0]
     },
     {
-      "name": "Boccanera",
-      "location": "Kraków",
-      "attributes": ["0","1","1","1","1","0","0","0","1","0","0","0","1","0"]
+      "Name": "Boccanera",
+      "Location": "Kraków",
+      "Attributes": [0,1,1,1,1,0,0,0,1,0,0,0,1,0]
     },
     {
-      "name": "Moo Moo Steak & Burger Club",
-      "location": "Kraków",
-      "attributes": ["0","0","0","1","0","1","0","0","0","0","1","0","0","0"]
+      "Name": "Moo Moo Steak & Burger Club",
+      "Location": "Kraków",
+      "Attributes": [0,0,0,1,0,1,0,0,0,0,1,0,0,0]
     },
     {
-      "name": "Restauracja Polska",
-      "location": "Kraków",
-      "attributes": ["0","0","0","0","0","1","0","0","1","0","0","0","0","0"]
+      "Name": "Restauracja Polska",
+      "Location": "Kraków",
+      "Attributes": [0,0,0,0,0,1,0,0,1,0,0,0,0,0]
     },
     {
-      "name": "Frania Cafe",
-      "location": "Kraków",
-      "attributes": ["0","0","1","0","0","1","0","0","1","0","0","0","1","1"]
+      "Name": "Frania Cafe",
+      "Location": "Kraków",
+      "Attributes": [0,0,1,0,0,1,0,0,1,0,0,0,1,1]
     },
     {
-      "name": "Multi Qlti",
-      "location": "Kraków",
-      "attributes": ["1","0","0","1","0","0","0","0","0","0","0","0","0","1"]
+      "Name": "Multi Qlti",
+      "Location": "Kraków",
+      "Attributes": [1,0,0,1,0,0,0,0,0,0,0,0,0,1]
     },
     {
-      "name": "Golonkarnia Bar & Restauracja",
-      "location": "Kraków",
-      "attributes": ["0","0","0","1","0","1","0","0","0","0","0","0","0","0"]
+      "Name": "Golonkarnia Bar & Restauracja",
+      "Location": "Kraków",
+      "Attributes": [0,0,0,1,0,1,0,0,0,0,0,0,0,0]
     },
     {
-      "name": "Iggy Pizza",
-      "location": "Wrocław",
-      "attributes": ["0","1","1","0","1","0","0","0","0","0","0","0","1","1"]
+      "Name": "Iggy Pizza",
+      "Location": "Wrocław",
+      "Attributes": [0,1,1,0,1,0,0,0,0,0,0,0,1,1]
     },
     {
-      "name": "Soczewka Kuchnia + Bar",
-      "location": "Wrocław",
-      "attributes": ["1","0","1","1","0","0","0","0","0","0","1","1","1","1"]
+      "Name": "Soczewka Kuchnia + Bar",
+      "Location": "Wrocław",
+      "Attributes": [1,0,1,1,0,0,0,0,0,0,1,1,1,1]
     },
     {
-      "name": "Mango Mama Rynek",
-      "location": "Wrocław",
-      "attributes": ["0","0","0","0","0","0","0","1","1","1","0","0","0","1"]
+      "Name": "Mango Mama Rynek",
+      "Location": "Wrocław",
+      "Attributes": [0,0,0,0,0,0,0,1,1,1,0,0,0,1]
     },
     {
-      "name": "Woo Thai Restaurant",
-      "location": "Wrocław",
-      "attributes": ["0","0","0","1","0","0","0","1","1","0","0","1","0","0"]
+      "Name": "Woo Thai Restaurant",
+      "Location": "Wrocław",
+      "Attributes": [0,0,0,1,0,0,0,1,1,0,0,1,0,0]
     },
     {
-      "name": "Tutti Santi - Wrocław",
-      "location": "Wrocław",
-      "attributes": ["0","1","1","0","1","0","0","0","1","0","0","0","1","0"]
+      "Name": "Tutti Santi - Wrocław",
+      "Location": "Wrocław",
+      "Attributes": [0,1,1,0,1,0,0,0,1,0,0,0,1,0]
     },
     {
-      "name": "Speakeasy - księgarnio - kawiarnia kryminalna",
-      "location": "Wrocław",
-      "attributes": ["0","0","1","1","0","1","0","0","1","0","0","0","1","1"]
+      "Name": "Speakeasy - księgarnio - kawiarnia kryminalna",
+      "Location": "Wrocław",
+      "Attributes": [0,0,1,1,0,1,0,0,1,0,0,0,1,1]
     },
     {
-      "name": "OK Wine Bar Restauracja",
-      "location": "Wrocław",
-      "attributes": ["0","0","1","1","1","1","0","0","1","0","1","0","1","0"]
+      "Name": "OK Wine Bar Restauracja",
+      "Location": "Wrocław",
+      "Attributes": [0,0,1,1,1,1,0,0,1,0,1,0,1,0]
     },
     {
-      "name": "Orientuj się",
-      "location": "Wrocław",
-      "attributes": ["0","0","0","0","0","0","0","1","1","0","0","1","1","0"]
+      "Name": "Orientuj się",
+      "Location": "Wrocław",
+      "Attributes": [0,0,0,0,0,0,0,1,1,0,0,1,1,0]
     },
     {
-      "name": "Niezły Dym",
-      "location": "Wrocław",
-      "attributes": ["0","1","1","0","1","0","0","0","0","0","0","0","1","0"]
+      "Name": "Niezły Dym",
+      "Location": "Wrocław",
+      "Attributes": [0,1,1,0,1,0,0,0,0,0,0,0,1,0]
     },
     {
-      "name": "Nielnna Piekarnia i Wino",
-      "location": "Wrocław",
-      "attributes": ["0","0","1","1","1","1","0","0","1","0","0","0","1","1"]
+      "Name": "Nielnna Piekarnia i Wino",
+      "Location": "Wrocław",
+      "Attributes": [0,0,1,1,1,1,0,0,1,0,0,0,1,1]
     },
     {
-      "name": "MO.BAR",
-      "location": "Poznań",
-      "attributes": ["0","0","1","1","0","0","0","0","0","0","1","0","0","1"]
+      "Name": "MO.BAR",
+      "Location": "Poznań",
+      "Attributes": [0,0,1,1,0,0,0,0,0,0,1,0,0,1]
     },
     {
-      "name": "Schaboszczak od Dziadka",
-      "location": "Poznań",
-      "attributes": ["0","0","0","1","0","1","0","0","0","0","1","0","1","0"]
+      "Name": "Schaboszczak od Dziadka",
+      "Location": "Poznań",
+      "Attributes": [0,0,0,1,0,1,0,0,0,0,1,0,1,0]
     },
     {
-      "name": "ORZO People Music Nature Poznań",
-      "location": "Poznań",
-      "attributes": ["0","0","1","1","1","0","0","0","1","0","1","1","1","1"]
+      "Name": "ORZO People Music Nature Poznań",
+      "Location": "Poznań",
+      "Attributes": [0,0,1,1,1,0,0,0,1,0,1,1,1,1]
     },
     {
-      "name": "Tutti Santi",
-      "location": "Poznań",
-      "attributes": ["0","1","1","0","1","0","0","0","1","0","0","0","1","1"]
+      "Name": "Tutti Santi",
+      "Location": "Poznań",
+      "Attributes": [0,1,1,0,1,0,0,0,1,0,0,0,1,1]
     },
     {
-      "name": "Tutti Santi",
-      "location": "Poznań",
-      "attributes": ["0","1","1","0","1","0","0","0","1","0","0","0","1","1"]
+      "Name": "Tutti Santi",
+      "Location": "Poznań",
+      "Attributes": [0,1,1,0,1,0,0,0,1,0,0,0,1,1]
     },
     {
-      "name": "Thai Thai Poznań",
-      "location": "Poznań",
-      "attributes": ["0","0","0","1","0","0","0","1","1","0","0","1","0","1"]
+      "Name": "Thai Thai Poznań",
+      "Location": "Poznań",
+      "Attributes": [0,0,0,1,0,0,0,1,1,0,0,1,0,1]
     },
     {
-      "name": "Wiejskie Jadło",
-      "location": "Poznań",
-      "attributes": ["0","0","0","1","0","1","0","0","1","0","0","0","0","0"]
+      "Name": "Wiejskie Jadło",
+      "Location": "Poznań",
+      "Attributes": [0,0,0,1,0,1,0,0,1,0,0,0,0,0]
     },
     {
-      "name": "Taj india",
-      "location": "Poznań",
-      "attributes": ["0","0","0","0","0","0","0","1","1","1","0","0","1","0"]
+      "Name": "Taj india",
+      "Location": "Poznań",
+      "Attributes": [0,0,0,0,0,0,0,1,1,1,0,0,1,0]
     },
     {
-      "name": "Oberża Pod Dzwonkiem",
-      "location": "Poznań",
-      "attributes": ["0","0","0","1","0","1","0","0","0","0","1","0","0","0"]
+      "Name": "Oberża Pod Dzwonkiem",
+      "Location": "Poznań",
+      "Attributes": [0,0,0,1,0,1,0,0,0,0,1,0,0,0]
     },
     {
-      "name": "Mc Doner Kebab",
-      "location": "Poznań",
-      "attributes": ["0","0","0","0","0","0","1","1","1","0","0","0","1","0"]
+      "Name": "Mc Doner Kebab",
+      "Location": "Poznań",
+      "Attributes": [0,0,0,0,0,0,1,1,1,0,0,0,1,0]
     }
   ]
 }

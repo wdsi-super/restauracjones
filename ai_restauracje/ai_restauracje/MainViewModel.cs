@@ -7,26 +7,26 @@ using System.Threading.Tasks;
 
 namespace ai_restauracje
 {
-	public class MainViewModel : ViewModelBase
-	{
-		Model _model;
+    public class MainViewModel : ViewModelBase
+    {
+        Model _model;
 
-		public ObservableCollection<Restaurant> Restaurants
+        public ObservableCollection<Restaurant> Restaurants
         {
-			get
+            get
             {
-				return _model.Restaurants;
+                return _model.Restaurants;
             }
         }
 
-		public string Tescik
+        public string Tescik
         {
-			get => _model.Test;
+            get => _model.Test;
         }
 
-		public MainViewModel(Model model)
+        public MainViewModel(Model model)
         {
-			_model = model;
+            _model = model;
         }
-	}
+    }
 }
