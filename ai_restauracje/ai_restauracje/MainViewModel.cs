@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 
 namespace ai_restauracje
 {
@@ -13,10 +8,8 @@ namespace ai_restauracje
 
         public ObservableCollection<Restaurant> Restaurants
         {
-            get
-            {
-                return _model.Restaurants;
-            }
+            get => _model.Restaurants;
+            set => SetProperty(ref _model.Restaurants, value);
         }
 
         public string Tescik
