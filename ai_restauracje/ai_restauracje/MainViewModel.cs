@@ -2,24 +2,24 @@
 
 namespace ai_restauracje
 {
-	public class MainViewModel : ViewModelBase
-	{
-		private Model _model;
+    public class MainViewModel : ViewModelBase
+    {
+        Model _model;
 
-		public ObservableCollection<Restaurant> Restaurants
-		{
-			get => _model.Restaurants;
-			set => SetProperty(ref _model.Restaurants, value);
-		}
+        public ObservableCollection<Restaurant> Restaurants
+        {
+            get => _model.Restaurants;
+            set => SetProperty(ref _model.Restaurants, value);
+        }
 
-		public string Tescik
-		{
-			get => _model.Test;
-		}
+        public string Tescik
+        {
+            get => _model.Test;
+        }
 
-		public MainViewModel(Model model)
-		{
-			_model = model;
-		}
-	}
+        public MainViewModel(Model model)
+        {
+            _model = model;
+        }
+    }
 }

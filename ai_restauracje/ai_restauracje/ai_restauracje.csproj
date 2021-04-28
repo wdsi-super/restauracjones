@@ -6,4 +6,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="copy &quot;$(SolutionDir)\restauracje.json&quot; &quot;$(TargetDir)\restauracje.json&quot;" />
+  </Target>
+
 </Project>

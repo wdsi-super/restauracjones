@@ -28,14 +28,14 @@ namespace ai_restauracje
 		{
 			InitializeComponent();
 
-			model = new Model();
+			model = new Model("restauracje.json");
 			mainViewModel = new MainViewModel(model);
 			DataContext = mainViewModel;
 		}
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            model.Restaurants.Add(new Restaurant("Cośtam", "Kraków", model.AttributesList.Count));
+            model.Restaurants.Add(new Restaurant("Cośtam", "Kraków", model.AttributeNames.Count));
         }
     }
 }

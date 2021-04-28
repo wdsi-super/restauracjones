@@ -4,55 +4,51 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.IO;
 
 namespace ai_restauracje
 {
-	public class Model
-	{
-		public List<string> AttributesList;
-		public ObservableCollection<Restaurant> Restaurants;
-		public string Test { get => "Dziaa"; }
-
-
-		public Model(string filepath = "")
-        {
-			// TODO: Load JSON file
-
-			// TODO: Load AttributesList from JSON
-			AttributesList = new List<string>
-			{
-				"atrybut 1",
-				"atrrrrrrrr"
-			};
-
-			// TODO: Load from JSON
-			// coś jak Restaurants = JSON.LoadFile(class=List<Restaurant>, filepath);
-
-			Restaurants = new ObservableCollection<Restaurant>
-			{
-				new Restaurant("Wielkie Szyncle", "Warszawa", AttributesList.Count),
-				new Restaurant("U szwejka", "Warszawa", AttributesList.Count),
-				new Restaurant("U szwejka 2", "Kraków", AttributesList.Count),
-			};
-		}
-	}
-
-	public class Restaurant
+    public class Model
     {
-		public string Name { get; set; }
-		public string Location { get; set; }
-		public double[] Attributes { get; set; }
+        public List<string> AttributeNames { get; set; }
+        public ObservableCollection<Restaurant> Restaurants { get; set; }
+        public string Test { get => "Dziaa"; }
 
-		public double Sim(Restaurant other)
+        public Model() { }
+
+        public Model(string filepath)
         {
-			return 0.0;
+            string jsonString = File.ReadAllText(filepath);
+            Model m = JsonSerializer.Deserialize<Model>(jsonString);
+            AttributeNames = m.AttributeNames;
+            Restaurants = m.Restaurants;
+        }
+    }
+
+    public class Restaurant
+    {
+        public Restaurant() { }
+        public string Name { get; set; }
+        public string Location { get; set; }
+        public int[] Attributes { get; set; }
+
+        public double Sim(Restaurant other)
+        {
+            double innerProduct=0;
+            for (int i = 0; i < Attributes.Length; i++)
+                innerProduct += Attributes[i] * other.Attributes[i];
+            double lenA = Math.Sqrt(this.Attributes.Sum());
+            double lenB = Math.Sqrt(other.Attributes.Sum());
+            return innerProduct / (lenA * lenB);
         }
 
-		public Restaurant(string name, string location, int attributesCount)
+        public Restaurant(string name, string location, int AttributesCount)
         {
-			Name = name;
-			Location = location;
-			Attributes = new double[attributesCount];
+            Name = name;
+            Location = location;
+            Attributes = new int[AttributesCount];
         }
     }
 }
