@@ -9,7 +9,7 @@ namespace ai_restauracje
         public ObservableCollection<Restaurant> Restaurants
         {
             get => _model.Restaurants;
-            set => SetProperty(ref _model.Restaurants, value);
+           // set => SetProperty(ref _model.Restaurants, value);
         }
 
         public string Tescik

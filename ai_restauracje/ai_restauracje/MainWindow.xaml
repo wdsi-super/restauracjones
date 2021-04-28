@@ -5,18 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-Namespace:ai_restauracje"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Znajdź restaurację dla siebie!" Height="450" Width="800">
+    <Grid VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="120"/>
-            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <Button Content="{Binding Path=Tescik}" Click="Button_Click"></Button>
+            <ComboBox Name="filter" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" 
+                      SelectionChanged="filter_SelectionChanged" ItemsSource="{Binding Source={StaticResource locationsEnum}}">
+                
+            </ComboBox>
         </Grid>
         <Grid Grid.Row="1">
-            <ListView ItemsSource="{Binding Path=Restaurants}">
+            <ListView ItemsSource="{Binding ElementName=filter, Path=SelectedItem, Converter={StaticResource filterConverter}}" >
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Name" Width="200" DisplayMemberBinding="{Binding Name}" />
