@@ -13,10 +13,16 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <Button Content="{Binding Path=Tescik}"></Button>
+            <Button Content="{Binding Path=Tescik}" Click="Button_Click"></Button>
         </Grid>
         <Grid Grid.Row="1">
-            <ListView>
+            <ListView ItemsSource="{Binding Path=Restaurants}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" Width="200" DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Location" Width="200" DisplayMemberBinding="{Binding Location}" />
+                    </GridView>
+                </ListView.View>
             </ListView>
         </Grid>
     </Grid>

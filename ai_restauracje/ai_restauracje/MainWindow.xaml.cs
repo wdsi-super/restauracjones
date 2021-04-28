@@ -32,5 +32,10 @@ namespace ai_restauracje
 			mainViewModel = new MainViewModel(model);
 			DataContext = mainViewModel;
 		}
-	}
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            model.Restaurants.Add(new Restaurant("kurcze", "felek", model.AttributesList.Count));
+        }
+    }
 }

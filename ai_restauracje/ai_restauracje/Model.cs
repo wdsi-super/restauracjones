@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace ai_restauracje
 	public class Model
 	{
 		public List<string> AttributesList;
-		public List<Restaurant> Restaurants;
+		public ObservableCollection<Restaurant> Restaurants;
 		public string Test { get => "Dziaa"; }
 
 
@@ -27,7 +28,7 @@ namespace ai_restauracje
 			// TODO: Load from JSON
 			// coś jak Restaurants = JSON.LoadFile(class=List<Restaurant>, filepath);
 
-			Restaurants = new List<Restaurant>
+			Restaurants = new ObservableCollection<Restaurant>
 			{
 				new Restaurant("wielkie szyncle", "warszaw", AttributesList.Count),
 				new Restaurant("u szwejka", "warszawa", AttributesList.Count),
@@ -38,9 +39,9 @@ namespace ai_restauracje
 
 	public class Restaurant
     {
-		public string Name;
-		public string Location;
-        public double[] Attributes;
+		public string Name { get; set; }
+		public string Location { get; set; }
+		public double[] Attributes { get; set; }
 
 		public double Sim(Restaurant other)
         {

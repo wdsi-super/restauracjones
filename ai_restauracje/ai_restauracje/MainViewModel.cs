@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +11,13 @@ namespace ai_restauracje
 	{
 		Model _model;
 
-		private string _openFileName;
-		public string OpenFileName
-		{
-			get => _openFileName;
-			set => SetProperty(ref _openFileName, value);
-		}
+		public ObservableCollection<Restaurant> Restaurants
+        {
+			get
+            {
+				return _model.Restaurants;
+            }
+        }
 
 		public string Tescik
         {
