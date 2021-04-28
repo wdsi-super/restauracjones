@@ -30,9 +30,9 @@ namespace ai_restauracje
 
 			Restaurants = new ObservableCollection<Restaurant>
 			{
-				new Restaurant("wielkie szyncle", "warszaw", AttributesList.Count),
-				new Restaurant("u szwejka", "warszawa", AttributesList.Count),
-				new Restaurant("u szwejka 2", "krakuf", AttributesList.Count),
+				new Restaurant("Wielkie Szyncle", "Warszawa", AttributesList.Count),
+				new Restaurant("U szwejka", "Warszawa", AttributesList.Count),
+				new Restaurant("U szwejka 2", "Kraków", AttributesList.Count),
 			};
 		}
 	}

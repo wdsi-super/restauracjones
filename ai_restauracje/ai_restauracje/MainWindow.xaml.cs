@@ -35,7 +35,7 @@ namespace ai_restauracje
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            model.Restaurants.Add(new Restaurant("kurcze", "felek", model.AttributesList.Count));
+            model.Restaurants.Add(new Restaurant("Cośtam", "Kraków", model.AttributesList.Count));
         }
     }
 }
