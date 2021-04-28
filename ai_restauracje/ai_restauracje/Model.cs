@@ -39,8 +39,8 @@ namespace ai_restauracje
             double innerProduct=0;
             for (int i = 0; i < Attributes.Length; i++)
                 innerProduct += Attributes[i] * other.Attributes[i];
-            double lenA = this.Attributes.Sum();
-            double lenB = other.Attributes.Sum();
+            double lenA = Math.Sqrt(this.Attributes.Sum());
+            double lenB = Math.Sqrt(other.Attributes.Sum());
             return innerProduct / (lenA * lenB);
         }
 
