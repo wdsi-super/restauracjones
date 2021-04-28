@@ -24,6 +24,7 @@ namespace ai_restauracje
             Model m = JsonSerializer.Deserialize<Model>(jsonString);
             AttributeNames = m.AttributeNames;
             Restaurants = m.Restaurants;
+            Restaurants[0].Sim(Restaurants[1]);
         }
     }
 
@@ -36,7 +37,12 @@ namespace ai_restauracje
 
         public double Sim(Restaurant other)
         {
-            return 0.0;
+            double innerProduct=0;
+            for (int i = 0; i < Attributes.Length; i++)
+                innerProduct += Attributes[i] * other.Attributes[i];
+            double lenA = this.Attributes.Sum();
+            double lenB = other.Attributes.Sum();
+            return innerProduct / (lenA * lenB);
         }
 
         public Restaurant(string name, string location, int AttributesCount)
