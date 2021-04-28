@@ -34,6 +34,23 @@ namespace ai_restauracje
         public string Location { get; set; }
         public int[] Attributes { get; set; }
 
+        public int IsPub { get { return Attributes[0]; } }
+        public int IsPizzeria { get { return Attributes[1]; } }
+        public int IsCafe { get { return Attributes[2]; } }
+        public int IsBar { get { return Attributes[3]; } }
+        public int IsItalian { get { return Attributes[4]; } }
+        public int IsPolish { get { return Attributes[5]; } }
+        public int IsKebab { get { return Attributes[6]; } }
+        public int IsOriental { get { return Attributes[7]; } }
+        public int IsVegan { get { return Attributes[8]; } }
+        public int IsIndian { get { return Attributes[9]; } }
+        public int IsBurgerAndSteak { get { return Attributes[10]; } }
+        public int IsFusion { get { return Attributes[11]; } }
+        public int IsChildrenFriendly { get { return Attributes[12]; } }
+        public int IsAnimalsFriendly { get { return Attributes[13]; } }
+
+
+
         public double Sim(Restaurant other)
         {
             double innerProduct=0;

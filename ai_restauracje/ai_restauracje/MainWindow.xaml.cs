@@ -31,11 +31,18 @@ namespace ai_restauracje
 
 			InitializeComponent();
 			filter.SelectedIndex = 0;
+
+			attributeComboBox.ItemsSource = mainViewModel.data4Combobox;
 		}
 
         private void filter_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 			var selected = filter.SelectedIndex;
+        }
+
+        private void attributeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+			attributeComboBox.SelectedIndex = -1;
         }
     }
 }
