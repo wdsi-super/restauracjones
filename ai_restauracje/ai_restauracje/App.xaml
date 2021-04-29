@@ -5,7 +5,7 @@
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <local:FilterConverter x:Key="filterConverter"/>
+        <local:FilterMultiConverter x:Key="filterMultiConverter"/>
         <ObjectDataProvider x:Key="locationsEnum" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
             <ObjectDataProvider.MethodParameters>
                 <x:Type TypeName="local:Locations"/>
