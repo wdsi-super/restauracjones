@@ -27,15 +27,9 @@ namespace ai_restauracje
 			mainViewModel = new MainViewModel(model);
 			DataContext = mainViewModel;
 			
-			App.Current.Resources.Add("modelView", mainViewModel);
 
 			InitializeComponent();
 			filter.SelectedIndex = 0;
 		}
-
-        private void filter_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-			var selected = filter.SelectedIndex;
-        }
     }
 }

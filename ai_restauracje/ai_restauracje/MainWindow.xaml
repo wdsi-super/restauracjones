@@ -14,12 +14,18 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <ComboBox Name="filter" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" 
-                      SelectionChanged="filter_SelectionChanged" ItemsSource="{Binding Source={StaticResource locationsEnum}}">
+                      ItemsSource="{Binding Source={StaticResource locationsEnum}}">
                 
             </ComboBox>
         </Grid>
         <Grid Grid.Row="1">
-            <ListView ItemsSource="{Binding ElementName=filter, Path=SelectedItem, Converter={StaticResource filterConverter}}" >
+            <ListView>
+                <ListView.ItemsSource>
+                    <MultiBinding Converter="{StaticResource filterMultiConverter}">
+                        <Binding ElementName="filter" Path="SelectedItem"/>
+                        <Binding Path="Restaurants"/>
+                    </MultiBinding>
+                </ListView.ItemsSource>
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Name" Width="200" DisplayMemberBinding="{Binding Name}" />
