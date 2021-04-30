@@ -11,8 +11,8 @@ namespace ai_restauracje
     {
         public List<string> AttributeNames { get; set; }
         public ObservableCollection<Restaurant> Restaurants { get; set; }
-
-
+        public ObservableCollection<SimilarRestaurant> KBestRestaurants { get; set; }
+        public List<AttributeForNewRestaurant> ComboBoxOptions { get; set; }
         public RestaurantToCreate RestaurantToCreate { get; set; }
         public Model() { }
 
@@ -23,6 +23,10 @@ namespace ai_restauracje
             AttributeNames = m.AttributeNames;
             Restaurants = m.Restaurants;
             RestaurantToCreate = new RestaurantToCreate("", "", AttributeNames.Count, AttributeNames);
+            KBestRestaurants = new ObservableCollection<SimilarRestaurant>();
+            ComboBoxOptions = new List<AttributeForNewRestaurant>();
+            foreach (var attr in AttributeNames)
+                ComboBoxOptions.Add(new AttributeForNewRestaurant() { AttributeName = attr, AttributeValue = false });
         }
 
     }
@@ -69,7 +73,16 @@ namespace ai_restauracje
         }
 
     }
-
+    public class SimilarRestaurant : Restaurant
+    {
+        public string Similarity { get; set; }
+        public SimilarRestaurant(Restaurant restaurant, string sim):base(restaurant.Name, restaurant.Location, restaurant.Attributes.Length)
+        {
+            for (int i = 0; i < Attributes.Length; i++)
+                Attributes[i] = restaurant.Attributes[i];
+            Similarity = sim;
+        }
+    }
     public class RestaurantToCreate : Restaurant
     {
         public List<AttributeForNewRestaurant> ComboBoxOptions { get; set; }
