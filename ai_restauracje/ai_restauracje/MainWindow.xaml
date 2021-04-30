@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-Namespace:ai_restauracje"
         mc:Ignorable="d"
-        Title="Find restaurant perfect for you!" Height="550" Width="800">
+        Title="Find restaurant perfect for you!" Height="550" Width="800" ResizeMode="NoResize">
     <Window.Resources>
         <ControlTemplate x:Key="errorTemplate">
             <Border BorderBrush="Red" BorderThickness="2">
