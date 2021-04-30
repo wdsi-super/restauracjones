@@ -2,13 +2,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.IO;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 
 namespace ai_restauracje
 {
@@ -78,7 +73,7 @@ namespace ai_restauracje
     public class RestaurantToCreate : Restaurant
     {
         public List<AttributeForNewRestaurant> ComboBoxOptions { get; set; }
-
+        public ValidLocations LocationEnum { get; set; }
         public RestaurantToCreate(string name, string location, int attributesCount, List<string> attributeNames) : base(name, location, attributesCount)
         {
             ComboBoxOptions = new List<AttributeForNewRestaurant>();

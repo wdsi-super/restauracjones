@@ -7,9 +7,15 @@
     <Application.Resources>
         <local:FilterMultiConverter x:Key="filterMultiConverter"/>
         <local:AttributeValueConverter x:Key="attributeValueConverter"/>
+        <local:EnableSelectRestaurantButtonConverter x:Key="enableButtonConverter"/>
         <ObjectDataProvider x:Key="locationsEnum" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
             <ObjectDataProvider.MethodParameters>
                 <x:Type TypeName="local:Locations"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <ObjectDataProvider x:Key="validLocationsEnum" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="local:ValidLocations"/>
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
     </Application.Resources>

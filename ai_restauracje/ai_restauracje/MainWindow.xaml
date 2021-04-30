@@ -5,129 +5,155 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-Namespace:ai_restauracje"
         mc:Ignorable="d"
-        Title="Find restaurant perfect for you!" Height="500" Width="800">
+        Title="Find restaurant perfect for you!" Height="550" Width="800">
+    <Window.Resources>
+        <ControlTemplate x:Key="errorTemplate">
+            <Border BorderBrush="Red" BorderThickness="2">
+                <DockPanel>
+                    <AdornedElementPlaceholder/>
+                </DockPanel>
+            </Border>
+        </ControlTemplate>
+    </Window.Resources>
     <Grid VerticalAlignment="Stretch">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <ComboBox Grid.Column="2" Name="filter" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" 
-                      ItemsSource="{Binding Source={StaticResource locationsEnum}}">
-                </ComboBox>
-                <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0">Filter by city:</TextBlock>
-            </Grid>
-        </Grid>
-        <Grid Grid.Row="1">
-            <TabControl Name="tabControl">
+        <TabControl Name="tabControl">
                 <TabItem Header="All Restaurants" Name="restaurantsTab">
-                    <ListView>
-                        <ListView.ItemsSource>
-                            <MultiBinding Converter="{StaticResource filterMultiConverter}">
-                                <Binding ElementName="filter" Path="SelectedItem"/>
-                                <Binding Path="Restaurants"/>
-                            </MultiBinding>
-                        </ListView.ItemsSource>
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="Name" Width="Auto" DisplayMemberBinding="{Binding Name}"/>
-                                <GridViewColumn Header="Location" Width="Auto" DisplayMemberBinding="{Binding Location}" />
-                                <GridViewColumn Header="Pub" DisplayMemberBinding="{Binding IsPub}"/>
-                                <GridViewColumn Header="Pizzeria" DisplayMemberBinding="{Binding IsPizzeria}"/>
-                                <GridViewColumn Header="Cafe" DisplayMemberBinding="{Binding IsCafe}"/>
-                                <GridViewColumn Header="Bar" DisplayMemberBinding="{Binding IsBar}"/>
-                                <GridViewColumn Header="Italian" DisplayMemberBinding="{Binding IsItalian}"/>
-                                <GridViewColumn Header="Polish" DisplayMemberBinding="{Binding IsPolish}"/>
-                                <GridViewColumn Header="Kebab" DisplayMemberBinding="{Binding IsKebab}"/>
-                                <GridViewColumn Header="Oriental" DisplayMemberBinding="{Binding IsOriental}"/>
-                                <GridViewColumn Header="Vegan" DisplayMemberBinding="{Binding IsVegan}"/>
-                                <GridViewColumn Header="Indian" DisplayMemberBinding="{Binding IsIndian}"/>
-                                <GridViewColumn Header="BurgerAndSteak" DisplayMemberBinding="{Binding IsBurgerAndSteak}"/>
-                                <GridViewColumn Header="Fusion" DisplayMemberBinding="{Binding IsFusion}"/>
-                                <GridViewColumn Header="Children friendly" DisplayMemberBinding="{Binding IsChildrenFriendly}"/>
-                                <GridViewColumn Header="Animals friendly" DisplayMemberBinding="{Binding IsAnimalsFriendly}"/>
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <ComboBox Grid.Column="2" Name="filter" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" 
+                                        ItemsSource="{Binding Source={StaticResource locationsEnum}}">
+                            </ComboBox>
+                            <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0">Filter by city:</TextBlock>
+                        </Grid>
+                        <ListView Grid.Row="1" Name="listView">
+                            <ListView.ItemsSource>
+                                <MultiBinding Converter="{StaticResource filterMultiConverter}">
+                                    <Binding ElementName="filter" Path="SelectedItem"/>
+                                    <Binding Path="Restaurants"/>
+                                </MultiBinding>
+                            </ListView.ItemsSource>
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Name" Width="Auto" DisplayMemberBinding="{Binding Name}"/>
+                                    <GridViewColumn Header="Location" Width="Auto" DisplayMemberBinding="{Binding Location}" />
+                                    <GridViewColumn Header="Pub" DisplayMemberBinding="{Binding IsPub}"/>
+                                    <GridViewColumn Header="Pizzeria" DisplayMemberBinding="{Binding IsPizzeria}"/>
+                                    <GridViewColumn Header="Cafe" DisplayMemberBinding="{Binding IsCafe}"/>
+                                    <GridViewColumn Header="Bar" DisplayMemberBinding="{Binding IsBar}"/>
+                                    <GridViewColumn Header="Italian" DisplayMemberBinding="{Binding IsItalian}"/>
+                                    <GridViewColumn Header="Polish" DisplayMemberBinding="{Binding IsPolish}"/>
+                                    <GridViewColumn Header="Kebab" DisplayMemberBinding="{Binding IsKebab}"/>
+                                    <GridViewColumn Header="Oriental" DisplayMemberBinding="{Binding IsOriental}"/>
+                                    <GridViewColumn Header="Vegan" DisplayMemberBinding="{Binding IsVegan}"/>
+                                    <GridViewColumn Header="Indian" DisplayMemberBinding="{Binding IsIndian}"/>
+                                    <GridViewColumn Header="BurgerAndSteak" DisplayMemberBinding="{Binding IsBurgerAndSteak}"/>
+                                    <GridViewColumn Header="Fusion" DisplayMemberBinding="{Binding IsFusion}"/>
+                                    <GridViewColumn Header="Children friendly" DisplayMemberBinding="{Binding IsChildrenFriendly}"/>
+                                    <GridViewColumn Header="Animals friendly" DisplayMemberBinding="{Binding IsAnimalsFriendly}"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                        <Grid Grid.Row="2" DataContext="{Binding Path=RestaurantToCreate, Mode=TwoWay}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button x:Name="useSelectedBtn" Width="100" Height="Auto" Margin="0 10 40 10" HorizontalAlignment="Right"
+                                        Click="useSelectedBtn_Click" IsEnabled="{Binding ElementName=listView, Path=SelectedIndex, Converter={StaticResource enableButtonConverter}}">Use selected</Button>
+                                <Button Grid.Column="1" x:Name="addCutomBtn" Width="100" Height="Auto" Margin="40 10 0 10" HorizontalAlignment="Left"
+                                Click="addCutomBtn_Click">Add custom</Button>
+                            </Grid>
+                            <Grid Grid.Row="1" Name="gridToHide1" Visibility="Hidden">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Margin="10 0 0 0 ">Name:</TextBlock>
+                                    <TextBox x:Name="newRestaurantName" Margin="10 2 5 2" Grid.Row="1" Validation.ErrorTemplate="{StaticResource errorTemplate}">
+                                        <TextBox.Text>
+                                            <Binding Mode="TwoWay" Path="Name">
+                                                <Binding.ValidationRules>
+                                                    <!--<local:NameValidation/>-->
+                                                </Binding.ValidationRules>
+                                            </Binding>
+                                        </TextBox.Text>
+                                    </TextBox>
+                                </Grid>
+                                <Grid Grid.Column="1" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Margin="10 0 0 0 ">Location:</TextBlock>
+                                    <ComboBox x:Name="newRestaurantLocation" Margin="10 2 5 2" Grid.Row="1" SelectedValue="{Binding Mode=TwoWay, Path=LocationEnum}"
+                                                 ItemsSource="{Binding Source={StaticResource validLocationsEnum}}"/>
+                                </Grid>
+                                <Grid Grid.Column="2">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" Margin="10 0 0 0">Options:</TextBlock>
+                                    <ComboBox Grid.Row="1" Margin="10 0 0 0" Name="attributeComboBox" SelectionChanged="attributeComboBox_SelectionChanged"
+                                                ItemsSource="{Binding Path=ComboBoxOptions, Mode=TwoWay}">
+                                        <ComboBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <CheckBox Width="20" IsChecked="{Binding Path=AttributeValue, Mode=TwoWay}"/>
+                                                    <TextBlock Text="{Binding Path=AttributeName, Mode=TwoWay}" Margin="5 0 0 0"></TextBlock>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </ComboBox.ItemTemplate>
+                                    </ComboBox>
+                                </Grid>
+
+                            </Grid>
+                            <Grid Grid.Row="2" Name="gridToHide2" Visibility="Hidden">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Column="1" x:Name="addToDatabaseButton" Width="130" Height="Auto" Margin="10" 
+                                        Click="addToDatabaseButton_Click">Add to database</Button>
+                                <Button Grid.Column="2" x:Name="useWithoutAddingButton" Width="130" Height="Auto" Margin="10" 
+                                        HorizontalAlignment="Left" Click="useWithoutAddingButton_Click">Use just once</Button>
+                            </Grid>
+                        </Grid>
+                    </Grid>
                 </TabItem>
                 <TabItem Header="Best for you" Name="solutionTab">
                     <ListView>
                     </ListView>
                 </TabItem>
             </TabControl>
+
         </Grid>
-        <Grid Grid.Row="2" DataContext="{Binding Path=RestaurantToCreate, Mode=TwoWay}">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Button x:Name="useSelectedBtn" Width="100" Height="Auto" Margin="10">Use selected</Button>
-            <Grid Grid.Row="1" >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid >
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <TextBlock Margin="10 0 0 0 ">Name:</TextBlock>
-                    <TextBox x:Name="newRestaurantName" Margin="10 2 5 2" Grid.Row="1" Text="{Binding Mode=TwoWay, Path=Name}"></TextBox>
-                </Grid>
-                <Grid Grid.Column="1" >
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <TextBlock Margin="10 0 0 0 ">Location:</TextBlock>
-                    <TextBox x:Name="newRestaurantLocation" Margin="10 2 5 2" Grid.Row="1" Text="{Binding Mode=TwoWay, Path=Location}"></TextBox>
-                </Grid>
-                <Grid Grid.Column="2">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Margin="10 0 0 0">Options:</TextBlock>
-                    <ComboBox Grid.Row="1" Margin="10 0 0 0" Name="attributeComboBox" SelectionChanged="attributeComboBox_SelectionChanged"
-                          ItemsSource="{Binding Path=ComboBoxOptions, Mode=TwoWay}">
-                        <ComboBox.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <CheckBox Width="20" IsChecked="{Binding Path=AttributeValue, Mode=TwoWay}"/>
-                                    <TextBlock Text="{Binding Path=AttributeName, Mode=TwoWay}" Margin="5 0 0 0"></TextBlock>
-                                </StackPanel>
-                            </DataTemplate>
-                        </ComboBox.ItemTemplate>
-                    </ComboBox>
-                </Grid>
-               
-            </Grid>
-            <Grid Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Button Grid.Column="1" x:Name="addToDatabaseButton" Width="130" Height="Auto" Margin="10" 
-                        Click="addToDatabaseButton_Click">Add to database</Button>
-                <Button Grid.Column="2" x:Name="useWithoutAddingButton" Width="130" Height="Auto" Margin="10" 
-                        HorizontalAlignment="Left">Use just once</Button>
-            </Grid>
-        </Grid>
-    </Grid>
 </Window>
