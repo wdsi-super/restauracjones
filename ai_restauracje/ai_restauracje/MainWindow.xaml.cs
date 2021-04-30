@@ -30,17 +30,21 @@ namespace ai_restauracje
 
 			InitializeComponent();
 			filter.SelectedIndex = 0;
-
-			attributeComboBox.ItemsSource = mainViewModel.data4Combobox;
 		}
-        private void filter_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-			var selected = filter.SelectedIndex;
-        }
 
         private void attributeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 			attributeComboBox.SelectedIndex = -1;
         }
+
+        private void addToDatabaseButton_Click(object sender, RoutedEventArgs e)
+        {
+			RestaurantToCreate restaurant = mainViewModel.RestaurantToCreate;
+			for(int i=0;i<restaurant.ComboBoxOptions.Count;i++)
+				restaurant.Attributes[i] = restaurant.ComboBoxOptions[i].AttributeValue ? 1 : 0;
+			mainViewModel.Restaurants.Add(restaurant);
+			mainViewModel.RestaurantToCreate = new RestaurantToCreate("", "", mainViewModel.AttributeNames.Count, mainViewModel.AttributeNames);
+
+		}
     }
 }

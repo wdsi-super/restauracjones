@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.IO;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace ai_restauracje
 {
@@ -14,8 +16,9 @@ namespace ai_restauracje
     {
         public List<string> AttributeNames { get; set; }
         public ObservableCollection<Restaurant> Restaurants { get; set; }
-        public string Test { get => "Dziaa"; }
 
+
+        public RestaurantToCreate RestaurantToCreate { get; set; }
         public Model() { }
 
         public Model(string filepath)
@@ -24,7 +27,9 @@ namespace ai_restauracje
             Model m = JsonSerializer.Deserialize<Model>(jsonString);
             AttributeNames = m.AttributeNames;
             Restaurants = m.Restaurants;
+            RestaurantToCreate = new RestaurantToCreate("", "", AttributeNames.Count, AttributeNames);
         }
+
     }
 
     public class Restaurant
@@ -53,7 +58,7 @@ namespace ai_restauracje
 
         public double Sim(Restaurant other)
         {
-            double innerProduct=0;
+            double innerProduct = 0;
             for (int i = 0; i < Attributes.Length; i++)
                 innerProduct += Attributes[i] * other.Attributes[i];
             double lenA = Math.Sqrt(this.Attributes.Sum());
@@ -67,5 +72,24 @@ namespace ai_restauracje
             Location = location;
             Attributes = new int[AttributesCount];
         }
+
+    }
+
+    public class RestaurantToCreate : Restaurant
+    {
+        public List<AttributeForNewRestaurant> ComboBoxOptions { get; set; }
+
+        public RestaurantToCreate(string name, string location, int attributesCount, List<string> attributeNames) : base(name, location, attributesCount)
+        {
+            ComboBoxOptions = new List<AttributeForNewRestaurant>();
+            foreach (var attr in attributeNames)
+                ComboBoxOptions.Add(new AttributeForNewRestaurant() { AttributeName = attr, AttributeValue = false });
+        }
+    }
+    public class AttributeForNewRestaurant
+    {
+        public bool AttributeValue { get; set; }
+        public string AttributeName { get; set; }
+
     }
 }

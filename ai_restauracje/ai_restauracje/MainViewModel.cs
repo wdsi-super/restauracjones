@@ -7,30 +7,30 @@ namespace ai_restauracje
     {
         Model _model;
 
-        public List<AttributeForNewRestaurant> data4Combobox = new List<AttributeForNewRestaurant>();
+        public List<string> AttributeNames 
+        { 
+            get => _model.AttributeNames;
+        }
+
+        public RestaurantToCreate RestaurantToCreate 
+        {
+            get => _model.RestaurantToCreate;
+            set
+            {
+                _model.RestaurantToCreate = value;
+                OnPropertyChanged();
+            }
+        }
+
         public ObservableCollection<Restaurant> Restaurants
         {
             get => _model.Restaurants;
-           // set => SetProperty(ref _model.Restaurants, value);
-        }
-
-        public string Tescik
-        {
-            get => _model.Test;
+            set => _model.Restaurants = value;
         }
 
         public MainViewModel(Model model)
         {
             _model = model;
-            foreach (var attr in _model.AttributeNames)
-                data4Combobox.Add(new AttributeForNewRestaurant() { AttributeName=attr, AttributeValue=false});
         }
-    }
-
-    public class AttributeForNewRestaurant
-    {
-        public bool AttributeValue { get; set; }
-        public string AttributeName { get; set; }
-
     }
 }

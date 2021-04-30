@@ -6,6 +6,7 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <local:FilterMultiConverter x:Key="filterMultiConverter"/>
+        <local:AttributeValueConverter x:Key="attributeValueConverter"/>
         <ObjectDataProvider x:Key="locationsEnum" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
             <ObjectDataProvider.MethodParameters>
                 <x:Type TypeName="local:Locations"/>
