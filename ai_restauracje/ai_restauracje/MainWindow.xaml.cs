@@ -84,8 +84,9 @@ namespace ai_restauracje
             restaurantsInTheSameCity.Sort(
             delegate (SimilarRestaurant r1, SimilarRestaurant r2) 
             {
+                if (r1.Similarity == "100%" && r2.Similarity == "100%") return 0;
+                if (r1.Similarity == "100%") return -1;
                 if (r2.Similarity == "100%") return 1;
-                if (r1.Similarity == "100%") return 1;
                 return r2.Similarity.CompareTo(r1.Similarity); 
             });
             ObservableCollection<SimilarRestaurant> similars = new ObservableCollection<SimilarRestaurant>();
