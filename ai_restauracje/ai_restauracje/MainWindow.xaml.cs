@@ -81,7 +81,13 @@ namespace ai_restauracje
                     var sim = (int)(Math.Round(selectedRestaurant.Sim(res), 2) * 100);
                     restaurantsInTheSameCity.Add(new SimilarRestaurant(res, sim.ToString() + "%"));
                 }
-            restaurantsInTheSameCity.Sort(delegate (SimilarRestaurant r1, SimilarRestaurant r2) { return r2.Similarity.CompareTo(r1.Similarity); });
+            restaurantsInTheSameCity.Sort(
+            delegate (SimilarRestaurant r1, SimilarRestaurant r2) 
+            {
+                if (r2.Similarity == "100%") return 1;
+                if (r1.Similarity == "100%") return 1;
+                return r2.Similarity.CompareTo(r1.Similarity); 
+            });
             ObservableCollection<SimilarRestaurant> similars = new ObservableCollection<SimilarRestaurant>();
             for (int i = 0; i < restaurantsInTheSameCity.Count && i < k; i++)
                 similars.Add(restaurantsInTheSameCity[i]);
