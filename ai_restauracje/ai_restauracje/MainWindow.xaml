@@ -120,7 +120,7 @@
                                     <RowDefinition Height="*"/>
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
-                                <TextBlock Grid.Row="0" Margin="10 0 0 0">Options:</TextBlock>
+                                <TextBlock Grid.Row="0" Margin="10 0 0 0">Attributes:</TextBlock>
                                 <ComboBox Grid.Row="1" Margin="10 2 5 2" Name="attributeComboBox" SelectionChanged="attributeComboBox_SelectionChanged"
                                                 ItemsSource="{Binding Path=ComboBoxOptions, Mode=TwoWay}">
                                     <ComboBox.ItemTemplate>
