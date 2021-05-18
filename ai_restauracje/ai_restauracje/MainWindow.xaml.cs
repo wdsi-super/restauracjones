@@ -16,6 +16,9 @@ namespace ai_restauracje
         bool customClicked = false;
         bool onlyAttrClicked = false;
         bool fromOptionsOnly = false;
+
+        Brush funBorderBrush = new SolidColorBrush(Color.FromRgb(153, 51, 255));
+        Brush normalBorderBrush = new SolidColorBrush(Color.FromRgb(112, 112, 112));
         public MainWindow()
         {
             model = new Model("restauracje.json");
@@ -26,6 +29,8 @@ namespace ai_restauracje
             InitializeComponent();
             filter.SelectedIndex = 0;
             kBestComboBox.SelectedIndex = 0;
+            useSelectedBtn.BorderThickness = new Thickness(2);
+            useSelectedBtn.BorderBrush = funBorderBrush;
         }
 
         private void attributeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -41,14 +46,7 @@ namespace ai_restauracje
             restaurant.Location = restaurant.LocationEnum.ToString();
             mainViewModel.Restaurants.Add(restaurant);
             mainViewModel.RestaurantToCreate = new RestaurantToCreate("", "", mainViewModel.AttributeNames.Count, mainViewModel.AttributeNames);
-
-        }
-
-        private void useSelectedBtn_Click(object sender, RoutedEventArgs e)
-        {
-            fromOptionsOnly = false;
-            tabControl.SelectedIndex = 1;
-            kBestRestaurantList.ItemsSource = mainViewModel.KBestRestaurants = SelectBestRestaurants((int)kSlider.Value, (ValidLocations)kBestComboBox.SelectedItem);
+            useSelectedBtn_Click(sender, e);
         }
 
         private void useWithoutAddingButton_Click(object sender, RoutedEventArgs e)
@@ -58,6 +56,12 @@ namespace ai_restauracje
             kBestRestaurantList.ItemsSource = mainViewModel.KBestRestaurants = SelectBestRestaurants((int)kSlider.Value, (ValidLocations)kBestComboBox.SelectedItem);
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            fromOptionsOnly = false;
+            tabControl.SelectedIndex = 1;
+            kBestRestaurantList.ItemsSource = mainViewModel.KBestRestaurants = SelectBestRestaurants((int)kSlider.Value, (ValidLocations)kBestComboBox.SelectedItem);
+        }
         private ObservableCollection<SimilarRestaurant> SelectBestRestaurants(int k, ValidLocations location)
         {
             Restaurant selectedRestaurant;
@@ -107,44 +111,68 @@ namespace ai_restauracje
 
         private void attrComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            attrComboBox.SelectedIndex = -1;
+            //attrComboBox.SelectedIndex = -1;
         }
 
         private void choseAttributesBtn_Click(object sender, RoutedEventArgs e)
         {
             if (!onlyAttrClicked)
             {
-                choseAttributesBtn.Background = new SolidColorBrush(Color.FromRgb(240, 240, 240));
-                addCutomBtn.Background = new SolidColorBrush(Color.FromRgb(221, 221, 221));
                 customClicked = false;
                 onlyAttrClicked = true;
-                gridToHide1.Visibility = Visibility.Hidden;
-                gridToHide2.Visibility = Visibility.Visible;
+                Option1.Visibility = Visibility.Hidden;
+                Option2.Visibility = Visibility.Hidden;
+                Option3.Visibility = Visibility.Visible;
+                choseAttributesBtn.BorderThickness = new Thickness(2);
+                choseAttributesBtn.BorderBrush = funBorderBrush;
+                useSelectedBtn.BorderThickness = new Thickness(1);
+                useSelectedBtn.BorderBrush = normalBorderBrush;
+                addCutomBtn.BorderThickness = new Thickness(1);
+                addCutomBtn.BorderBrush = normalBorderBrush;
             }
             else
             {
                 onlyAttrClicked = false;
-                choseAttributesBtn.Background = new SolidColorBrush(Color.FromRgb(221, 221, 221));
-                gridToHide2.Visibility = Visibility.Hidden;
+            }
+        }
+        private void useSelectedBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (onlyAttrClicked || customClicked)
+            {
+                Option1.Visibility = Visibility.Visible;
+                Option2.Visibility = Visibility.Hidden;
+                Option3.Visibility = Visibility.Hidden;
+                useSelectedBtn.BorderThickness = new Thickness(2);
+                useSelectedBtn.BorderBrush = funBorderBrush;
+                choseAttributesBtn.BorderThickness = new Thickness(1);
+                choseAttributesBtn.BorderBrush = normalBorderBrush;
+                addCutomBtn.BorderThickness = new Thickness(1);
+                addCutomBtn.BorderBrush = normalBorderBrush;
             }
         }
         private void addCutomBtn_Click(object sender, RoutedEventArgs e)
         {
             if (!customClicked)
             {
-                addCutomBtn.Background = new SolidColorBrush(Color.FromRgb(240, 240, 240));
-                choseAttributesBtn.Background = new SolidColorBrush(Color.FromRgb(221, 221, 221));
                 customClicked = true;
                 onlyAttrClicked = false;
-                gridToHide1.Visibility = Visibility.Visible;
-                gridToHide2.Visibility = Visibility.Hidden;
+                Option1.Visibility = Visibility.Hidden;
+                Option2.Visibility = Visibility.Visible;
+                Option3.Visibility = Visibility.Hidden;
+                addCutomBtn.BorderThickness = new Thickness(2);
+                addCutomBtn.BorderBrush = funBorderBrush;
+                useSelectedBtn.BorderThickness = new Thickness(1);
+                useSelectedBtn.BorderBrush = normalBorderBrush;
+                choseAttributesBtn.BorderThickness = new Thickness(1);
+                choseAttributesBtn.BorderBrush = normalBorderBrush;
             }
             else
             {
                 customClicked = false;
-                addCutomBtn.Background = new SolidColorBrush(Color.FromRgb(221, 221, 221));
-                gridToHide1.Visibility = Visibility.Hidden;
+
             }
         }
+
+
     }
 }

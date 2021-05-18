@@ -13,7 +13,7 @@ namespace ai_restauracje
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
             var value = values[0];
-            if (value == null || (Locations)value == Locations.Dowolne)
+            if (value == null || (Locations)value == Locations.All)
             {
                 return values[1];
             }
