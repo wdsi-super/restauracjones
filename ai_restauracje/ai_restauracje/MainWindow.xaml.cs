@@ -108,12 +108,6 @@ namespace ai_restauracje
         {
             kBestRestaurantList.ItemsSource = mainViewModel.KBestRestaurants = SelectBestRestaurants((int)kSlider.Value, (ValidLocations)kBestComboBox.SelectedItem);
         }
-
-        private void attrComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            //attrComboBox.SelectedIndex = -1;
-        }
-
         private void choseAttributesBtn_Click(object sender, RoutedEventArgs e)
         {
             if (!onlyAttrClicked)
