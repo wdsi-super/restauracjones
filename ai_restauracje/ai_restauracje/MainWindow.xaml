@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-Namespace:ai_restauracje"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-        Title="Find restaurant perfect for you!" Height="700" Width="550" ResizeMode="NoResize">
+        Title="Find restaurant perfect for you!" Height="700" Width="950" ResizeMode="NoResize">
     <Window.Resources>
         <Style x:Key="ButtonStyle" TargetType="Button">
             <Setter Property="Width" Value="120"/>
