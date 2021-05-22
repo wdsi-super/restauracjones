@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.IO;
 
 namespace ai_restauracje
@@ -14,8 +11,9 @@ namespace ai_restauracje
     {
         public List<string> AttributeNames { get; set; }
         public ObservableCollection<Restaurant> Restaurants { get; set; }
-        public string Test { get => "Dziaa"; }
-
+        public ObservableCollection<SimilarRestaurant> KBestRestaurants { get; set; }
+        public List<AttributeForNewRestaurant> ComboBoxOptions { get; set; }
+        public RestaurantToCreate RestaurantToCreate { get; set; }
         public Model() { }
 
         public Model(string filepath)
@@ -24,7 +22,13 @@ namespace ai_restauracje
             Model m = JsonSerializer.Deserialize<Model>(jsonString);
             AttributeNames = m.AttributeNames;
             Restaurants = m.Restaurants;
+            RestaurantToCreate = new RestaurantToCreate("", "", AttributeNames.Count, AttributeNames);
+            KBestRestaurants = new ObservableCollection<SimilarRestaurant>();
+            ComboBoxOptions = new List<AttributeForNewRestaurant>();
+            foreach (var attr in AttributeNames)
+                ComboBoxOptions.Add(new AttributeForNewRestaurant() { AttributeName = attr, AttributeValue = false });
         }
+
     }
 
     public class Restaurant
@@ -34,9 +38,26 @@ namespace ai_restauracje
         public string Location { get; set; }
         public int[] Attributes { get; set; }
 
+        public int IsPub { get { return Attributes[0]; } }
+        public int IsPizzeria { get { return Attributes[1]; } }
+        public int IsCafe { get { return Attributes[2]; } }
+        public int IsBar { get { return Attributes[3]; } }
+        public int IsItalian { get { return Attributes[4]; } }
+        public int IsPolish { get { return Attributes[5]; } }
+        public int IsKebab { get { return Attributes[6]; } }
+        public int IsOriental { get { return Attributes[7]; } }
+        public int IsVegan { get { return Attributes[8]; } }
+        public int IsIndian { get { return Attributes[9]; } }
+        public int IsBurgerAndSteak { get { return Attributes[10]; } }
+        public int IsFusion { get { return Attributes[11]; } }
+        public int IsChildrenFriendly { get { return Attributes[12]; } }
+        public int IsAnimalsFriendly { get { return Attributes[13]; } }
+
+
+
         public double Sim(Restaurant other)
         {
-            double innerProduct=0;
+            double innerProduct = 0;
             for (int i = 0; i < Attributes.Length; i++)
                 innerProduct += Attributes[i] * other.Attributes[i];
             double lenA = Math.Sqrt(this.Attributes.Sum());
@@ -50,5 +71,33 @@ namespace ai_restauracje
             Location = location;
             Attributes = new int[AttributesCount];
         }
+
+    }
+    public class SimilarRestaurant : Restaurant
+    {
+        public string Similarity { get; set; }
+        public SimilarRestaurant(Restaurant restaurant, string sim):base(restaurant.Name, restaurant.Location, restaurant.Attributes.Length)
+        {
+            for (int i = 0; i < Attributes.Length; i++)
+                Attributes[i] = restaurant.Attributes[i];
+            Similarity = sim;
+        }
+    }
+    public class RestaurantToCreate : Restaurant
+    {
+        public List<AttributeForNewRestaurant> ComboBoxOptions { get; set; }
+        public ValidLocations LocationEnum { get; set; }
+        public RestaurantToCreate(string name, string location, int attributesCount, List<string> attributeNames) : base(name, location, attributesCount)
+        {
+            ComboBoxOptions = new List<AttributeForNewRestaurant>();
+            foreach (var attr in attributeNames)
+                ComboBoxOptions.Add(new AttributeForNewRestaurant() { AttributeName = attr, AttributeValue = false });
+        }
+    }
+    public class AttributeForNewRestaurant
+    {
+        public bool AttributeValue { get; set; }
+        public string AttributeName { get; set; }
+
     }
 }

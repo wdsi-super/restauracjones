@@ -22,6 +22,12 @@ namespace ai_restauracje
 			}
 			return false;
 		}
+
+		protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
+		{
+			if (!string.IsNullOrEmpty(propertyName))
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+		}
 	}
 
 }
