@@ -147,11 +147,6 @@
       "Attributes": [0,1,1,1,1,0,0,0,1,0,0,0,1,0]
     },
     {
-      "Name": "Boccanera",
-      "Location": "Kraków",
-      "Attributes": [0,1,1,1,1,0,0,0,1,0,0,0,1,0]
-    },
-    {
       "Name": "Moo Moo Steak & Burger Club",
       "Location": "Kraków",
       "Attributes": [0,0,0,1,0,1,0,0,0,0,1,0,0,0]
@@ -240,11 +235,6 @@
       "Name": "ORZO People Music Nature Poznań",
       "Location": "Poznań",
       "Attributes": [0,0,1,1,1,0,0,0,1,0,1,1,1,1]
-    },
-    {
-      "Name": "Tutti Santi",
-      "Location": "Poznań",
-      "Attributes": [0,1,1,0,1,0,0,0,1,0,0,0,1,1]
     },
     {
       "Name": "Tutti Santi",
