@@ -72,20 +72,20 @@
                                 <GridView>
                                     <GridViewColumn Header="Name" Width="Auto" DisplayMemberBinding="{Binding Name}"/>
                                     <GridViewColumn Header="Location" Width="Auto" DisplayMemberBinding="{Binding Location}" />
-                                    <GridViewColumn Header="Pub" DisplayMemberBinding="{Binding IsPub}"/>
-                                    <GridViewColumn Header="Pizzeria" DisplayMemberBinding="{Binding IsPizzeria}"/>
-                                    <GridViewColumn Header="Cafe" DisplayMemberBinding="{Binding IsCafe}"/>
-                                    <GridViewColumn Header="Bar" DisplayMemberBinding="{Binding IsBar}"/>
-                                    <GridViewColumn Header="Italian" DisplayMemberBinding="{Binding IsItalian}"/>
-                                    <GridViewColumn Header="Polish" DisplayMemberBinding="{Binding IsPolish}"/>
-                                    <GridViewColumn Header="Kebab" DisplayMemberBinding="{Binding IsKebab}"/>
-                                    <GridViewColumn Header="Oriental" DisplayMemberBinding="{Binding IsOriental}"/>
-                                    <GridViewColumn Header="Vegan" DisplayMemberBinding="{Binding IsVegan}"/>
-                                    <GridViewColumn Header="Indian" DisplayMemberBinding="{Binding IsIndian}"/>
-                                    <GridViewColumn Header="BurgerAndSteak" DisplayMemberBinding="{Binding IsBurgerAndSteak}"/>
-                                    <GridViewColumn Header="Fusion" DisplayMemberBinding="{Binding IsFusion}"/>
-                                    <GridViewColumn Header="Children friendly" DisplayMemberBinding="{Binding IsChildrenFriendly}"/>
-                                    <GridViewColumn Header="Animals friendly" DisplayMemberBinding="{Binding IsAnimalsFriendly}"/>
+                                    <GridViewColumn Header="Pub" DisplayMemberBinding="{Binding IsPub, Converter={StaticResource attributeValueConverter}}"/>
+                                    <GridViewColumn Header="Pizzeria" DisplayMemberBinding="{Binding IsPizzeria, Converter={StaticResource attributeValueConverter}}"/>
+                                    <GridViewColumn Header="Cafe" DisplayMemberBinding="{Binding IsCafe, Converter={StaticResource attributeValueConverter}}"/>
+                                    <GridViewColumn Header="Bar" DisplayMemberBinding="{Binding IsBar, Converter={StaticResource attributeValueConverter}}"/>
+                                    <GridViewColumn Header="Italian" DisplayMemberBinding="{Binding IsItalian, Converter={StaticResource attributeValueConverter}}"/>
+                                    <GridViewColumn Header="Polish" DisplayMemberBinding="{Binding IsPolish, Converter={StaticResource attributeValueConverter}}"/>
+                                    <GridViewColumn Header="Kebab" DisplayMemberBinding="{Binding IsKebab, Converter={StaticResource attributeValueConverter}}"/>
+                                    <GridViewColumn Header="Oriental" DisplayMemberBinding="{Binding IsOriental, Converter={StaticResource attributeValueConverter}}"/>
+                                    <GridViewColumn Header="Vegan" DisplayMemberBinding="{Binding IsVegan, Converter={StaticResource attributeValueConverter}}"/>
+                                    <GridViewColumn Header="Indian" DisplayMemberBinding="{Binding IsIndian, Converter={StaticResource attributeValueConverter}}"/>
+                                    <GridViewColumn Header="BurgerAndSteak" DisplayMemberBinding="{Binding IsBurgerAndSteak, Converter={StaticResource attributeValueConverter}}"/>
+                                    <GridViewColumn Header="Fusion" DisplayMemberBinding="{Binding IsFusion, Converter={StaticResource attributeValueConverter}}"/>
+                                    <GridViewColumn Header="Children friendly" DisplayMemberBinding="{Binding IsChildrenFriendly, Converter={StaticResource attributeValueConverter}}"/>
+                                    <GridViewColumn Header="Animals friendly" DisplayMemberBinding="{Binding IsAnimalsFriendly, Converter={StaticResource attributeValueConverter}}"/>
                                 </GridView>
                             </ListView.View>
                         </ListView>

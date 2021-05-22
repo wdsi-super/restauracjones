@@ -13,8 +13,10 @@ namespace ai_restauracje
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             int val = (int)value;
-            if (val == 1) return "Resources\\check.jpg";
-            else return "Resources\\check.jpg";
+            if (val == 0)
+                return "·"; //"Resources\\empty.png";
+            else
+                return "✅"; // "Resources\\heavy-check-mark.png";    
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
